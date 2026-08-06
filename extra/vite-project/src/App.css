@@ -1,0 +1,53 @@
+/* Page Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* About, Skills and Projects Sections */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+/* Section Headings */
+h2 {
+    color: #4CAF50;
+}
+
+/* Paragraphs */
+p {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Skills and Projects List */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
