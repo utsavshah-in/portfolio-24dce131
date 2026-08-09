@@ -1,40 +1,34 @@
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 
-import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
 import Projects from "./components/Projects";
-import Footer from "./components/Footer";
-
+import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
 
 function App() {
-  const skills = [
-    "C++",
-    "Java",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "MongoDB",
-  ];
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div>
-      <Header
-        name="Utsav Shah"
-        themeColor="#1f2937"
-      />
+    <div className={darkMode ? "app dark-mode" : "app"}>
+      <NavBar />
 
-      <main>
-        <About
-          description="I am a Computer Engineering student interested in software development, web technologies, and problem solving."
-        />
+      <button
+        className="theme-toggle"
+        onClick={() => setDarkMode(!darkMode)}
+      >
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
 
-        <Skills skillList={skills} />
-
-        <Projects />
-      </main>
-
-      <Footer email="utsav@example.com" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

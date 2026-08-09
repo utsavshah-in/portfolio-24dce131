@@ -1,70 +1,95 @@
-#root {
-  min-height: 100vh;
-}
 
-/* Header */
 
-header {
-  background-color: #1f2937;
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
-}
+/* Navigation */
 
-header h1 {
-  margin: 0;
-  font-size: 3rem;
-}
-
-header p {
-  margin: 10px 0 0;
-  font-size: 1.2rem;
-  color: #cbd5e1;
-}
-
-/* Main content */
-
-main {
-  width: min(900px, 90%);
-  margin: 40px auto;
-}
-
-/* Sections */
-
-section {
-  background-color: white;
-  padding: 30px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-/* Lists */
-
-ul {
-  margin: 0;
-  padding-left: 25px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-
-footer {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
   background-color: #111827;
-  color: #d1d5db;
-  text-align: center;
-  padding: 25px 20px;
+  color: white;
 }
 
-footer p {
-  margin: 5px 0;
+.navbar h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Theme toggle */
+
+.theme-toggle {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #374151;
+  color: white;
+}
+
+/* Contact form */
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.help-text {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #e5e7eb;
+}
+
+/* Dark mode */
+
+.dark-mode {
+  min-height: 100vh;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.dark-mode section {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+.dark-mode textarea {
+  background-color: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.dark-mode .help-text {
+  background-color: #374151;
+  color: white;
 }
