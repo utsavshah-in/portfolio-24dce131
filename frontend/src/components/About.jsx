@@ -1,10 +1,3 @@
-function About({ description }) {
-  return (
-    <section>
-      <h2>About Me</h2>
-      <p>{description}</p>
-    </section>
-  );
+export default function About() {
+  return <section className="content-section" id="about"><div className="section-heading"><div><div className="eyebrow">01 / About</div><h2>A little about me.</h2></div><p>Curiosity first. Build, test, learn, repeat.</p></div><div className="about-grid"><article className="about-card"><h3>What I do</h3><p>I build responsive web interfaces and explore how thoughtful design and maintainable code work together.</p></article><article className="about-card"><h3>What I’m working toward</h3><p>Strengthening my frontend fundamentals, writing cleaner React components, and building projects that solve real problems.</p></article></div></section>;
 }
-
-export default About;
